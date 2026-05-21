@@ -1,14 +1,169 @@
-<!DOCTYPE html>
-  <html lang="en">
+<!doctype html>
+<html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>My Site</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>benjaminjaeger.com</title>
+    <style>
+      body {
+        background: white;
+        color: black;
+        font-family: "Times New Roman", serif;
+        margin: 0;
+        padding: 0;
+        min-height: 250vh;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: black;
+      }
+      a:hover {
+        background: black;
+        color: white;
+      }
+
+      video {
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-      <h1>Welcome</h1>
-      <ul>
-          <li><a href="/sports-betting/">Sports Betting</a></li>
-      </ul>
+    <h1 style="position: absolute; top: 2%; left: 4%; font-size: 3.5rem">
+      benjaminjaeger.com
+    </h1>
+
+    <a
+      href="/sports-betting/"
+      style="
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        font-size: 2rem;
+        font-weight: bold;
+      "
+      >SPORTS BETTING</a
+    >
+
+    <img
+      src="media/what.png"
+      style="position: absolute; top: 1%; left: 40%; width: 100px"
+    />
+
+    <a
+      href="https://www.youtube.com/watch?v=o3i5nDCw8C0&list=RDo3i5nDCw8C0&start_radio=1"
+      target="_blank"
+      rel="noopener"
+      style="position: absolute; top: 7%; left: 35%; font-size: 1.3rem"
+      >redirect</a
+    >
+
+    <img
+      src="media/fortnite.jpg"
+      style="position: absolute; top: 9%; left: 25%; width: 220px"
+    />
+
+    <img
+      src="media/xhaka.jpeg"
+      style="position: absolute; top: 10%; right: 12%; width: 230px"
+    />
+
+    <video
+      src="media/gucci.mp4"
+      loop
+      muted
+      autoplay
+      playsinline
+      style="position: absolute; top: 21%; left: 8%; width: 280px"
+    ></video>
+
+    <img
+      src="media/wow.jpg"
+      style="position: absolute; top: 24%; left: 45%; width: 220px"
+    />
+
+    <video
+      src="media/jeremy.mp4"
+      loop
+      muted
+      autoplay
+      playsinline
+      style="position: absolute; top: 80%; right: 5%; width: 300px"
+    ></video>
+
+    <img
+      src="media/what.png"
+      style="position: absolute; top: 38%; right: 20%; width: 70px"
+    />
+
+    <p
+      style="
+        position: absolute;
+        top: 47%;
+        left: 15%;
+        font-size: 1.1rem;
+        max-width: 480px;
+        line-height: 1.7;
+      "
+    >
+      <b>Money Boy - Ganz Allein</b><br /><br />
+      This goes out to all my cats in the projects<br />
+      Just livin' it, still livin' it<br />
+      Just livin' it, still livin' it<br />
+      Uh, Okay, Chiah<br /><br />
+      Schon als kleines Kind wollt ich tun was ein Gangster macht<br />
+      Doch die Gs von damals sind schon Tod oder l&auml;ngst in Haft<br />
+      Wenn ich die Raten f&uuml;r das Leasing nicht bezahlen kann<br />
+      Fahr ich vielleicht bald schon wieder Bus oder Stra&szlig;enbahn<br />
+      Ich hab viele Freunde und gute Bekannte, Slime<br />
+      Doch wenn das Finanzamt schreibt f&uuml;hle ich mich ganz allein<br />
+      Ich kann fragen in der Bank, ob sie Kredit dulden<br />
+      Denn langsam wird es richtig eng mit meinen Mietschulden<br />
+      Meinen Bentley musste ich verkaufen leider<br />
+      Nahm das Geld und gab es sofort aus f&uuml;r einen Haufen Kleider<br />
+      Wenn ich versage was soll ich meinen S&ouml;hnen sagen<br />
+      Wenn sie fragen: &bdquo;Warum f&auml;hrst du nicht mehr deinen
+      sch&ouml;nen Wagen&ldquo;<br />
+      Manchmal frag' ich Gott: &bdquo;Was soll denn aus mir nur
+      werden?&ldquo;<br />
+      Denn nur Gott hilft dir zu leben, Menschen helfen dir zu sterben<br />
+      Die Wahrheit schmerzt, deshalb gibt es auf der Welt die L&uuml;gen<br />
+      Wenn ich sage &bdquo;ich bin anders&ldquo; w&uuml;rde ich mich selbst
+      bel&uuml;gen<br />
+      Ich tu mein Leben leben, ich tu Fehler machen<br />
+      Aus manchen Fehlern lernen, manche Fehler wieder machen<br />
+      Ich bin nicht perfekt, aber tu mich nicht verurteilen<br />
+      Denn im Endeffekt kann nur Gott mich beurteilen<br />
+      Ich tu mein Leben leben, ich tu Fehler machen<br />
+      Aus manchen Fehlern lernen, manche Fehler wieder machen<br />
+      Ich bin nicht perfekt, aber tu mich nicht verurteilen<br />
+      Denn im Endeffekt kann nur Gott mich beurteilen<br /><br />
+      Just livin' it, still livin' it<br />
+      Just livin' it, still livin' it<br />
+      Just livin' it, still livin' it
+    </p>
+
+    <img
+      src="media/xhaka.jpeg"
+      style="position: absolute; top: 55%; right: 8%; width: 190px"
+    />
+
+    <img
+      src="media/fortnite.jpg"
+      style="position: absolute; top: 75%; left: 35%; width: 180px"
+    />
+
+    <script>
+      document.querySelectorAll("video").forEach((v) => {
+        v.addEventListener("mouseenter", () => {
+          v.muted = false;
+          v.play();
+        });
+        v.addEventListener("mouseleave", () => {
+          v.muted = true;
+        });
+      });
+    </script>
   </body>
-  </html>
+</html>
