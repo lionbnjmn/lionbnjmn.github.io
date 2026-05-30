@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>benjaminjaeger.com</title>
     <style>
+      @font-face {
+        font-family: "Fortnite";
+        src: url("fonts/fortnite.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
       body {
         background: white;
         color: black;
@@ -175,12 +183,36 @@
       .rarity-caption {
         flex: 0 0 auto;
         padding-top: 0.25rem;
-        font-size: 0.85rem;
-        text-transform: lowercase;
-        letter-spacing: 0.05em;
+        font-family:
+          "Fortnite", "Burbank Big Condensed Black", "Impact", sans-serif;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: normal;
         color: #555;
         text-align: center;
         min-height: 1em;
+      }
+      .rarity-caption[data-rarity="common"] {
+        color: #b1b1b1;
+      }
+      .rarity-caption[data-rarity="uncommon"] {
+        color: #319236;
+      }
+      .rarity-caption[data-rarity="rare"] {
+        color: #4c51f7;
+      }
+      .rarity-caption[data-rarity="epic"] {
+        color: #9d4dbb;
+      }
+      .rarity-caption[data-rarity="legendary"] {
+        color: #f3af19;
+      }
+      .rarity-caption[data-rarity="mythic"] {
+        color: #e5bc55;
+      }
+      .rarity-caption[data-rarity="exotic"] {
+        color: #00fffb;
       }
 
       .roll-button {
@@ -200,6 +232,14 @@
       .roll-button:hover {
         background: black;
         color: white;
+      }
+      .roll-button:disabled {
+        cursor: default;
+        opacity: 0.5;
+      }
+      .roll-button:disabled:hover {
+        background: white;
+        color: black;
       }
     </style>
   </head>

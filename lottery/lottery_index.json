@@ -1,22 +1,26 @@
 {
   "weights": {
-    "common": 60,
-    "uncommon": 30,
-    "rare": 10
+    "common": 1,
+    "uncommon": 1,
+    "rare": 1,
+    "epic": 1,
+    "legendary": 1,
+    "mythic": 1,
+    "exotic": 1
   },
   "items": [
     {
       "id": 1,
       "type": "video",
       "src": "lottery_media/gucci.mp4",
-      "rarity": "common",
+      "rarity": "rare",
       "description": "gucci mane on coding"
     },
     {
       "id": 2,
       "type": "image",
       "src": "lottery_media/fortnite.jpg",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "fortnite"
     },
     {
@@ -52,15 +56,15 @@
       "id": 7,
       "type": "video",
       "src": "lottery_media/jeremy.mp4",
-      "rarity": "common",
+      "rarity": "epic",
       "description": "jeremy fragrance fancam"
     },
     {
       "id": 8,
       "type": "video",
       "src": "lottery_media/all_is_vanity.mp4",
-      "rarity": "common",
-      "description": "all is vanity (buy it [here](https://aivapparel.square.site/hoodie-categories))"
+      "rarity": "rare",
+      "description": "all is vanity (buy it here: https://aivapparel.square.site/hoodie-categories)"
     },
     {
       "id": 9,
@@ -80,7 +84,7 @@
       "id": 11,
       "type": "video",
       "src": "lottery_media/barcola_edit.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "bradley barcola edit"
     },
     {
@@ -101,7 +105,7 @@
       "id": 14,
       "type": "video",
       "src": "lottery_media/captain_america.mp4",
-      "rarity": "common",
+      "rarity": "legendary",
       "description": "captain america"
     },
     {
@@ -115,14 +119,14 @@
       "id": 16,
       "type": "video",
       "src": "lottery_media/carl_fancam.mp4",
-      "rarity": "common",
+      "rarity": "rare",
       "description": "carl from shameless fancam"
     },
     {
       "id": 17,
       "type": "video",
       "src": "lottery_media/china.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "asian internet artifact"
     },
     {
@@ -136,7 +140,7 @@
       "id": 19,
       "type": "video",
       "src": "lottery_media/cloud_bursting.mp4",
-      "rarity": "common",
+      "rarity": "mythic",
       "description": "cloud bursting"
     },
     {
@@ -150,14 +154,14 @@
       "id": 21,
       "type": "video",
       "src": "lottery_media/david_goggins.mp4",
-      "rarity": "common",
+      "rarity": "epic",
       "description": "david goggins"
     },
     {
       "id": 22,
       "type": "video",
       "src": "lottery_media/doch.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "doch"
     },
     {
@@ -178,28 +182,28 @@
       "id": 25,
       "type": "video",
       "src": "lottery_media/every_fruit.mp4",
-      "rarity": "common",
+      "rarity": "epic",
       "description": "ive had every fruit"
     },
     {
       "id": 26,
       "type": "video",
       "src": "lottery_media/fat_bitches.mp4",
-      "rarity": "common",
+      "rarity": "legendary",
       "description": "streamer on fat bitches"
     },
     {
       "id": 27,
       "type": "video",
       "src": "lottery_media/femcel.mp4",
-      "rarity": "common",
+      "rarity": "exotic",
       "description": "you are not a real femcel.."
     },
     {
       "id": 28,
       "type": "video",
       "src": "lottery_media/folgende_gleichung.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "l\u00f6sen sie bitte folgende gleichung"
     },
     {
@@ -227,7 +231,7 @@
       "id": 32,
       "type": "video",
       "src": "lottery_media/he_tweaking.mp4",
-      "rarity": "common",
+      "rarity": "rare",
       "description": "ooh he tweaking"
     },
     {
@@ -241,14 +245,14 @@
       "id": 34,
       "type": "video",
       "src": "lottery_media/hood_pandemic.mp4",
-      "rarity": "common",
+      "rarity": "rare",
       "description": "the effects of the pandemic on the hood"
     },
     {
       "id": 35,
       "type": "video",
       "src": "lottery_media/huaraches.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "the uk garage scene"
     },
     {
@@ -262,14 +266,14 @@
       "id": 37,
       "type": "video",
       "src": "lottery_media/incel.mp4",
-      "rarity": "common",
+      "rarity": "exotic",
       "description": "you are not a real incel.."
     },
     {
       "id": 38,
       "type": "video",
       "src": "lottery_media/jewish_haircut.mp4",
-      "rarity": "common",
+      "rarity": "epic",
       "description": "jewish kid got his fade fucked up"
     },
     {
@@ -297,7 +301,7 @@
       "id": 42,
       "type": "video",
       "src": "lottery_media/kony_elisa.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "kony gebony on being a mega boss"
     },
     {
@@ -318,21 +322,21 @@
       "id": 45,
       "type": "video",
       "src": "lottery_media/leetcode_mog.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "coding platform mog edit"
     },
     {
       "id": 46,
       "type": "video",
       "src": "lottery_media/lets_go_movies.mp4",
-      "rarity": "common",
+      "rarity": "epic",
       "description": "andrew tate on going to movies"
     },
     {
       "id": 47,
       "type": "video",
       "src": "lottery_media/lookism.mp4",
-      "rarity": "common",
+      "rarity": "exotic",
       "description": "self explanatory"
     },
     {
@@ -346,28 +350,28 @@
       "id": 49,
       "type": "video",
       "src": "lottery_media/luke_belmar_jonny_walker.mp4",
-      "rarity": "common",
+      "rarity": "legendary",
       "description": "luke belmar on jonny walker"
     },
     {
       "id": 50,
       "type": "video",
       "src": "lottery_media/luke_belmar_river.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "luke belmar on words"
     },
     {
       "id": 51,
       "type": "video",
       "src": "lottery_media/magnus_carlsen_fancam.mp4",
-      "rarity": "common",
+      "rarity": "epic",
       "description": "magnus carlsen fancam"
     },
     {
       "id": 52,
       "type": "video",
       "src": "lottery_media/mark_zuckerberg.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "mark zuckerberg"
     },
     {
@@ -381,7 +385,7 @@
       "id": 54,
       "type": "video",
       "src": "lottery_media/miro_sauce.mp4",
-      "rarity": "common",
+      "rarity": "mythic",
       "description": "mejor reaction to miro thunfischsauce recipe"
     },
     {
@@ -402,7 +406,7 @@
       "id": 57,
       "type": "video",
       "src": "lottery_media/not_some_bullshit.mp4",
-      "rarity": "common",
+      "rarity": "legendary",
       "description": "hopefully its not some bullshit"
     },
     {
@@ -430,14 +434,14 @@
       "id": 61,
       "type": "video",
       "src": "lottery_media/portfolio.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "military industrial complex edit"
     },
     {
       "id": 62,
       "type": "video",
       "src": "lottery_media/rapist_fancam.mp4",
-      "rarity": "common",
+      "rarity": "epic",
       "description": "conor mcgregor walking fancam (unfortunately a rapist)"
     },
     {
@@ -465,7 +469,7 @@
       "id": 66,
       "type": "video",
       "src": "lottery_media/socrates_and_plato.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "socrates and plato"
     },
     {
@@ -486,7 +490,7 @@
       "id": 69,
       "type": "video",
       "src": "lottery_media/the_architect_and_the_builder.mp4",
-      "rarity": "common",
+      "rarity": "epic",
       "description": "the architect and the builder arrive calmly with a sense of purpose"
     },
     {
@@ -500,7 +504,7 @@
       "id": 71,
       "type": "video",
       "src": "lottery_media/them_boy_paegans.mp4",
-      "rarity": "common",
+      "rarity": "legendary",
       "description": "hey google"
     },
     {
@@ -528,14 +532,14 @@
       "id": 75,
       "type": "video",
       "src": "lottery_media/ynw_melly.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "ynw melly happy about honey bun"
     },
     {
       "id": 76,
       "type": "video",
       "src": "lottery_media/yodieland.mp4",
-      "rarity": "common",
+      "rarity": "epic",
       "description": "i wanna go to yodieland"
     },
     {
@@ -549,14 +553,14 @@
       "id": 78,
       "type": "video",
       "src": "lottery_media/young_sheldon_bigbangtheory.mp4",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "jamaican young sheldong big bang theory"
     },
     {
       "id": 79,
       "type": "video",
       "src": "lottery_media/zyzz.mp4",
-      "rarity": "common",
+      "rarity": "rare",
       "description": "zyzz with twins music"
     },
     {
@@ -577,7 +581,7 @@
       "id": 82,
       "type": "image",
       "src": "lottery_media/big_numbers.jpg",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "big numbers"
     },
     {
@@ -591,14 +595,14 @@
       "id": 84,
       "type": "image",
       "src": "lottery_media/e_mc2_ai.jpg",
-      "rarity": "common",
+      "rarity": "legendary",
       "description": "state of linkedin"
     },
     {
       "id": 85,
       "type": "image",
       "src": "lottery_media/ey_wottsch.jpg",
-      "rarity": "common",
+      "rarity": "mythic",
       "description": "ey wöttsch"
     },
     {
@@ -612,7 +616,7 @@
       "id": 87,
       "type": "image",
       "src": "lottery_media/for_me_5.jpg",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "destroy lonely"
     },
     {
@@ -640,7 +644,7 @@
       "id": 91,
       "type": "image",
       "src": "lottery_media/huet_guete_tag.jpg",
-      "rarity": "common",
+      "rarity": "epic",
       "description": "hüt guete tag"
     },
     {
@@ -668,21 +672,21 @@
       "id": 95,
       "type": "image",
       "src": "lottery_media/jeff_dr_chef.jpg",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "jeff bezos"
     },
     {
       "id": 96,
       "type": "image",
       "src": "lottery_media/kanye.jpg",
-      "rarity": "common",
+      "rarity": "uncommon",
       "description": "values and morals"
     },
     {
       "id": 97,
       "type": "image",
       "src": "lottery_media/speed_dating.jpg",
-      "rarity": "common",
+      "rarity": "legendary",
       "description": "selective dating procedure"
     },
     {
