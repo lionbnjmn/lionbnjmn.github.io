@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>benjaminjaeger.com</title>
+    <style>
+      body {
+        background: white;
+        color: black;
+        font-family: "Times New Roman", serif;
+        margin: 0;
+        padding: 0;
+        min-height: 250vh;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: black;
+      }
+      a:hover {
+        background: black;
+        color: white;
+      }
+
+      video {
+        cursor: pointer;
+      }
+
+      h1.title {
+        position: absolute;
+        top: 2%;
+        left: 4%;
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        margin: 0;
+      }
+
+      .lottery-button-wrap {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .lottery-button {
+        font-family: "Times New Roman", serif;
+        font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+        background: white;
+        color: black;
+        border: 2px solid black;
+        padding: 0.6rem 1.2rem;
+        min-height: 44px;
+        cursor: pointer;
+      }
+      .lottery-button:hover {
+        background: black;
+        color: white;
+      }
+
+      .scatter-img-100 {
+        width: clamp(60px, 12vw, 100px);
+      }
+      .scatter-img-220 {
+        width: clamp(120px, 28vw, 220px);
+      }
+      .scatter-img-230 {
+        width: clamp(120px, 28vw, 230px);
+      }
+      .scatter-img-190 {
+        width: clamp(100px, 24vw, 190px);
+      }
+      .scatter-img-180 {
+        width: clamp(100px, 22vw, 180px);
+      }
+      .scatter-img-70 {
+        width: clamp(40px, 9vw, 70px);
+      }
+      .scatter-vid-280 {
+        width: clamp(140px, 32vw, 280px);
+      }
+      .scatter-vid-300 {
+        width: clamp(140px, 34vw, 300px);
+      }
+
+      .lyrics {
+        position: absolute;
+        top: 47%;
+        left: 8%;
+        right: 8%;
+        font-size: clamp(0.95rem, 2.6vw, 1.1rem);
+        max-width: 480px;
+        line-height: 1.7;
+      }
+
+      /* Lottery booth */
+      #lottery-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: 100;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+      #lottery-overlay.open {
+        display: flex;
+      }
+
+      .lottery-booth {
+        position: relative;
+        background: white;
+        width: min(1200px, 100%);
+        height: min(640px, 92vh);
+        padding: 3rem 1.5rem 5.5rem;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+
+      .lottery-close {
+        position: absolute;
+        top: 0.4rem;
+        right: 0.6rem;
+        font-family: "Times New Roman", serif;
+        font-size: 1.6rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0.4rem 0.6rem;
+        min-width: 44px;
+        min-height: 44px;
+      }
+
+      .lottery-media-slot {
+        flex: 1;
+        min-height: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .lottery-media-slot img,
+      .lottery-media-slot video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        cursor: pointer;
+      }
+
+      .lottery-media-slot audio {
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .lottery-media-slot .lottery-link {
+        font-size: clamp(1.2rem, 4vw, 1.4rem);
+      }
+
+      .description-caption {
+        flex: 0 0 auto;
+        padding-top: 0.75rem;
+        font-size: 1rem;
+        color: black;
+        text-align: center;
+        min-height: 1.2em;
+      }
+
+      .rarity-caption {
+        flex: 0 0 auto;
+        padding-top: 0.25rem;
+        font-size: 0.85rem;
+        text-transform: lowercase;
+        letter-spacing: 0.05em;
+        color: #555;
+        text-align: center;
+        min-height: 1em;
+      }
+
+      .roll-button {
+        position: absolute;
+        bottom: 1.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Times New Roman", serif;
+        font-size: 1.4rem;
+        background: white;
+        color: black;
+        border: 2px solid black;
+        padding: 0.6rem 2rem;
+        min-height: 44px;
+        cursor: pointer;
+      }
+      .roll-button:hover {
+        background: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">benjaminjaeger.com</h1>
+
+    <img
+      src="media/what.png"
+      class="scatter-img-100"
+      style="position: absolute; top: 1%; left: 40%"
+    />
+
+    <img
+      src="media/fortnite.jpg"
+      class="scatter-img-220"
+      style="position: absolute; top: 9%; left: 25%"
+    />
+
+    <img
+      src="media/xhaka.jpeg"
+      class="scatter-img-230"
+      style="position: absolute; top: 10%; right: 12%"
+    />
+
+    <video
+      src="media/gucci.mp4"
+      loop
+      muted
+      autoplay
+      playsinline
+      class="scatter-vid-280"
+      style="position: absolute; top: 21%; left: 4%"
+    ></video>
+
+    <img
+      src="media/wow.jpg"
+      class="scatter-img-220"
+      style="position: absolute; top: 24%; left: 45%"
+    />
+
+    <video
+      src="media/jeremy.mp4"
+      loop
+      muted
+      autoplay
+      playsinline
+      class="scatter-vid-300"
+      style="position: absolute; top: 80%; right: 4%"
+    ></video>
+
+    <img
+      src="media/what.png"
+      class="scatter-img-70"
+      style="position: absolute; top: 38%; right: 20%"
+    />
+
+    <p class="lyrics">
+      <b>Money Boy - Ganz Allein</b><br /><br />
+      This goes out to all my cats in the projects<br />
+      Just livin' it, still livin' it<br />
+      Just livin' it, still livin' it<br />
+      Uh, Okay, Chiah<br /><br />
+      Schon als kleines Kind wollt ich tun was ein Gangster macht<br />
+      Doch die Gs von damals sind schon Tod oder l&auml;ngst in Haft<br />
+      Wenn ich die Raten f&uuml;r das Leasing nicht bezahlen kann<br />
+      Fahr ich vielleicht bald schon wieder Bus oder Stra&szlig;enbahn<br />
+      Ich hab viele Freunde und gute Bekannte, Slime<br />
+      Doch wenn das Finanzamt schreibt f&uuml;hle ich mich ganz allein<br />
+      Ich kann fragen in der Bank, ob sie Kredit dulden<br />
+      Denn langsam wird es richtig eng mit meinen Mietschulden<br />
+      Meinen Bentley musste ich verkaufen leider<br />
+      Nahm das Geld und gab es sofort aus f&uuml;r einen Haufen Kleider<br />
+      Wenn ich versage was soll ich meinen S&ouml;hnen sagen<br />
+      Wenn sie fragen: &bdquo;Warum f&auml;hrst du nicht mehr deinen
+      sch&ouml;nen Wagen&ldquo;<br />
+      Manchmal frag' ich Gott: &bdquo;Was soll denn aus mir nur
+      werden?&ldquo;<br />
+      Denn nur Gott hilft dir zu leben, Menschen helfen dir zu sterben<br />
+      Die Wahrheit schmerzt, deshalb gibt es auf der Welt die L&uuml;gen<br />
+      Wenn ich sage &bdquo;ich bin anders&ldquo; w&uuml;rde ich mich selbst
+      bel&uuml;gen<br />
+      Ich tu mein Leben leben, ich tu Fehler machen<br />
+      Aus manchen Fehlern lernen, manche Fehler wieder machen<br />
+      Ich bin nicht perfekt, aber tu mich nicht verurteilen<br />
+      Denn im Endeffekt kann nur Gott mich beurteilen<br />
+      Ich tu mein Leben leben, ich tu Fehler machen<br />
+      Aus manchen Fehlern lernen, manche Fehler wieder machen<br />
+      Ich bin nicht perfekt, aber tu mich nicht verurteilen<br />
+      Denn im Endeffekt kann nur Gott mich beurteilen<br /><br />
+      Just livin' it, still livin' it<br />
+      Just livin' it, still livin' it<br />
+      Just livin' it, still livin' it
+    </p>
+
+    <img
+      src="media/xhaka.jpeg"
+      class="scatter-img-190"
+      style="position: absolute; top: 55%; right: 8%"
+    />
+
+    <img
+      src="media/fortnite.jpg"
+      class="scatter-img-180"
+      style="position: absolute; top: 75%; left: 45%"
+    />
+
+    <div class="lottery-button-wrap">
+      <button id="open-lottery" type="button" class="lottery-button">
+        special lottery button
+      </button>
+    </div>
+
+    <div
+      id="lottery-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Lottery"
+    >
+      <div class="lottery-booth">
+        <button
+          id="close-lottery"
+          type="button"
+          class="lottery-close"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+        <div id="lottery-media-slot" class="lottery-media-slot"></div>
+        <div id="lottery-description" class="description-caption"></div>
+        <div id="lottery-rarity" class="rarity-caption"></div>
+        <button id="roll-button" type="button" class="roll-button">roll</button>
+      </div>
+    </div>
+
+    <script src="lottery.js" defer></script>
+  </body>
+</html>

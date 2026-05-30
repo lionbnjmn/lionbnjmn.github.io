@@ -1,0 +1,59 @@
+{
+  "weights": {
+    "common": 60,
+    "uncommon": 30,
+    "rare": 10
+  },
+  "items": [
+    {
+      "id": 1,
+      "type": "video",
+      "src": "lottery_media/gucci.mp4",
+      "rarity": "common",
+      "description": "Gucci Mane - Coding Snippet"
+    },
+    {
+      "id": 2,
+      "type": "image",
+      "src": "lottery_media/fortnite.jpg",
+      "rarity": "common",
+      "description": "Fortnite"
+    },
+    {
+      "id": 3,
+      "type": "image",
+      "src": "lottery_media/wow.jpg",
+      "rarity": "common",
+      "description": "wow"
+    },
+    {
+      "id": 4,
+      "type": "image",
+      "src": "lottery_media/xhaka.jpeg",
+      "rarity": "common",
+      "description": "Granit Xhaka for EM 2024"
+    },
+    {
+      "id": 5,
+      "type": "image",
+      "src": "lottery_media/what.png",
+      "rarity": "common",
+      "description": "what"
+    },
+    {
+      "id": 6,
+      "type": "link",
+      "href": "https://www.youtube.com/watch?v=o3i5nDCw8C0&list=RDo3i5nDCw8C0&start_radio=1",
+      "label": "redirect",
+      "rarity": "common",
+      "description": "Riff Raff - Larry Bird"
+    },
+    {
+      "id": 7,
+      "type": "video",
+      "src": "lottery_media/jeremy.mp4",
+      "rarity": "common",
+      "description": "Jeremy Fragrance fancam"
+    }
+  ]
+}
