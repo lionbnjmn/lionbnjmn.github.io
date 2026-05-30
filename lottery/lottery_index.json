@@ -10,14 +10,14 @@
       "type": "video",
       "src": "lottery_media/gucci.mp4",
       "rarity": "common",
-      "description": "Gucci Mane - Coding Snippet"
+      "description": "gucci mane on coding"
     },
     {
       "id": 2,
       "type": "image",
       "src": "lottery_media/fortnite.jpg",
       "rarity": "common",
-      "description": "Fortnite"
+      "description": "fortnite"
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "type": "image",
       "src": "lottery_media/xhaka.jpeg",
       "rarity": "common",
-      "description": "Granit Xhaka for EM 2024"
+      "description": "granit xhaka 2024"
     },
     {
       "id": 5,
@@ -46,14 +46,518 @@
       "href": "https://www.youtube.com/watch?v=o3i5nDCw8C0&list=RDo3i5nDCw8C0&start_radio=1",
       "label": "redirect",
       "rarity": "common",
-      "description": "Riff Raff - Larry Bird"
+      "description": "riff raff - larry bird"
     },
     {
       "id": 7,
       "type": "video",
       "src": "lottery_media/jeremy.mp4",
       "rarity": "common",
-      "description": "Jeremy Fragrance fancam"
+      "description": "jeremy fragrance fancam"
+    },
+    {
+      "id": 8,
+      "type": "video",
+      "src": "lottery_media/all_is_vanity.mp4",
+      "rarity": "common",
+      "description": "all is vanity (buy it [here](https://aivapparel.square.site/hoodie-categories))"
+    },
+    {
+      "id": 9,
+      "type": "video",
+      "src": "lottery_media/anne_frank.mp4",
+      "rarity": "common",
+      "description": "anne frank"
+    },
+    {
+      "id": 10,
+      "type": "video",
+      "src": "lottery_media/arab_edit.mp4",
+      "rarity": "common",
+      "description": "arab car culture edit"
+    },
+    {
+      "id": 11,
+      "type": "video",
+      "src": "lottery_media/barcola_edit.mp4",
+      "rarity": "common",
+      "description": "bradley barcola edit"
+    },
+    {
+      "id": 12,
+      "type": "video",
+      "src": "lottery_media/bia_bia.mp4",
+      "rarity": "common",
+      "description": "crunk is not dead"
+    },
+    {
+      "id": 13,
+      "type": "video",
+      "src": "lottery_media/bullets.mp4",
+      "rarity": "common",
+      "description": "i need more bullets"
+    },
+    {
+      "id": 14,
+      "type": "video",
+      "src": "lottery_media/captain_america.mp4",
+      "rarity": "common",
+      "description": "captain america"
+    },
+    {
+      "id": 15,
+      "type": "video",
+      "src": "lottery_media/car_hype.mp4",
+      "rarity": "common",
+      "description": "here we go"
+    },
+    {
+      "id": 16,
+      "type": "video",
+      "src": "lottery_media/carl_fancam.mp4",
+      "rarity": "common",
+      "description": "carl from shameless fancam"
+    },
+    {
+      "id": 17,
+      "type": "video",
+      "src": "lottery_media/china.mp4",
+      "rarity": "common",
+      "description": "asian internet artifact"
+    },
+    {
+      "id": 18,
+      "type": "video",
+      "src": "lottery_media/chinese_bodybuilder.mp4",
+      "rarity": "common",
+      "description": "asian bodybuilder edit"
+    },
+    {
+      "id": 19,
+      "type": "video",
+      "src": "lottery_media/cloud_bursting.mp4",
+      "rarity": "common",
+      "description": "cloud bursting"
+    },
+    {
+      "id": 20,
+      "type": "video",
+      "src": "lottery_media/cup_pong.mp4",
+      "rarity": "common",
+      "description": "beer pong mentality"
+    },
+    {
+      "id": 21,
+      "type": "video",
+      "src": "lottery_media/david_goggins.mp4",
+      "rarity": "common",
+      "description": "david goggins"
+    },
+    {
+      "id": 22,
+      "type": "video",
+      "src": "lottery_media/doch.mp4",
+      "rarity": "common",
+      "description": "doch"
+    },
+    {
+      "id": 23,
+      "type": "video",
+      "src": "lottery_media/doritos.mp4",
+      "rarity": "common",
+      "description": "girl on sharing doritos"
+    },
+    {
+      "id": 24,
+      "type": "video",
+      "src": "lottery_media/dr_perky.mp4",
+      "rarity": "common",
+      "description": "fucked up in the crib"
+    },
+    {
+      "id": 25,
+      "type": "video",
+      "src": "lottery_media/every_fruit.mp4",
+      "rarity": "common",
+      "description": "ive had every fruit"
+    },
+    {
+      "id": 26,
+      "type": "video",
+      "src": "lottery_media/fat_bitches.mp4",
+      "rarity": "common",
+      "description": "streamer on fat bitches"
+    },
+    {
+      "id": 27,
+      "type": "video",
+      "src": "lottery_media/femcel.mp4",
+      "rarity": "common",
+      "description": "you are not a real femcel.."
+    },
+    {
+      "id": 28,
+      "type": "video",
+      "src": "lottery_media/folgende_gleichung.mp4",
+      "rarity": "common",
+      "description": "lösen sie bitte folgende gleichung"
+    },
+    {
+      "id": 29,
+      "type": "video",
+      "src": "lottery_media/get_off_your_phone.mp4",
+      "rarity": "common",
+      "description": "get off your phone"
+    },
+    {
+      "id": 30,
+      "type": "video",
+      "src": "lottery_media/gucci_car.mp4",
+      "rarity": "common",
+      "description": "absolutely gucci car"
+    },
+    {
+      "id": 31,
+      "type": "video",
+      "src": "lottery_media/hawk_tuah.mp4",
+      "rarity": "common",
+      "description": "do you really hach tung (hard watch)"
+    },
+    {
+      "id": 32,
+      "type": "video",
+      "src": "lottery_media/he_tweaking.mp4",
+      "rarity": "common",
+      "description": "ooh he tweaking"
+    },
+    {
+      "id": 33,
+      "type": "video",
+      "src": "lottery_media/hello.mp4",
+      "rarity": "common",
+      "description": "hello"
+    },
+    {
+      "id": 34,
+      "type": "video",
+      "src": "lottery_media/hood_pandemic.mp4",
+      "rarity": "common",
+      "description": "the effects of the pandemic on the hood"
+    },
+    {
+      "id": 35,
+      "type": "video",
+      "src": "lottery_media/huaraches.mp4",
+      "rarity": "common",
+      "description": "the uk garage scene"
+    },
+    {
+      "id": 36,
+      "type": "video",
+      "src": "lottery_media/imagine_the_feeling.mp4",
+      "rarity": "common",
+      "description": "imagine the feeling bro"
+    },
+    {
+      "id": 37,
+      "type": "video",
+      "src": "lottery_media/incel.mp4",
+      "rarity": "common",
+      "description": "you are not a real incel.."
+    },
+    {
+      "id": 38,
+      "type": "video",
+      "src": "lottery_media/jewish_haircut.mp4",
+      "rarity": "common",
+      "description": "jewish kid got his fade fucked up"
+    },
+    {
+      "id": 39,
+      "type": "video",
+      "src": "lottery_media/jorge.mp4",
+      "rarity": "common",
+      "description": "jorge"
+    },
+    {
+      "id": 40,
+      "type": "video",
+      "src": "lottery_media/kendrick_superbowl.mp4",
+      "rarity": "common",
+      "description": "kendrick lamar's half time show"
+    },
+    {
+      "id": 41,
+      "type": "video",
+      "src": "lottery_media/kevin_gates_battery.mp4",
+      "rarity": "common",
+      "description": "kevin gates on car batteries (german)"
+    },
+    {
+      "id": 42,
+      "type": "video",
+      "src": "lottery_media/kony_elisa.mp4",
+      "rarity": "common",
+      "description": "kony gebony on being a mega boss"
+    },
+    {
+      "id": 43,
+      "type": "video",
+      "src": "lottery_media/kony_kuendigung.mp4",
+      "rarity": "common",
+      "description": "kony gebony loses job"
+    },
+    {
+      "id": 44,
+      "type": "video",
+      "src": "lottery_media/lebron_satanic.mp4",
+      "rarity": "common",
+      "description": "lebron james satanic ritual"
+    },
+    {
+      "id": 45,
+      "type": "video",
+      "src": "lottery_media/leetcode_mog.mp4",
+      "rarity": "common",
+      "description": "coding platform mog edit"
+    },
+    {
+      "id": 46,
+      "type": "video",
+      "src": "lottery_media/lets_go_movies.mp4",
+      "rarity": "common",
+      "description": "andrew tate on going to movies"
+    },
+    {
+      "id": 47,
+      "type": "video",
+      "src": "lottery_media/lookism.mp4",
+      "rarity": "common",
+      "description": "self explanatory"
+    },
+    {
+      "id": 48,
+      "type": "video",
+      "src": "lottery_media/blou_german.mp4",
+      "rarity": "common",
+      "description": "blou and zias on scientists (german)"
+    },
+    {
+      "id": 49,
+      "type": "video",
+      "src": "lottery_media/luke_belmar_jonny_walker.mp4",
+      "rarity": "common",
+      "description": "luke belmar on jonny walker"
+    },
+    {
+      "id": 50,
+      "type": "video",
+      "src": "lottery_media/luke_belmar_river.mp4",
+      "rarity": "common",
+      "description": "luke belmar on words"
+    },
+    {
+      "id": 51,
+      "type": "video",
+      "src": "lottery_media/magnus_carlsen_fancam.mp4",
+      "rarity": "common",
+      "description": "magnus carlsen fancam"
+    },
+    {
+      "id": 52,
+      "type": "video",
+      "src": "lottery_media/mark_zuckerberg.mp4",
+      "rarity": "common",
+      "description": "mark zuckerberg"
+    },
+    {
+      "id": 53,
+      "type": "video",
+      "src": "lottery_media/mexican_tire.mp4",
+      "rarity": "common",
+      "description": "tire on the road"
+    },
+    {
+      "id": 54,
+      "type": "video",
+      "src": "lottery_media/miro_sauce.mp4",
+      "rarity": "common",
+      "description": "mejor reaction to miro thunfischsauce recipe"
+    },
+    {
+      "id": 55,
+      "type": "video",
+      "src": "lottery_media/mourinho_said.mp4",
+      "rarity": "common",
+      "description": "mourinho famous words"
+    },
+    {
+      "id": 56,
+      "type": "video",
+      "src": "lottery_media/no_carti_no_uzi.mp4",
+      "rarity": "common",
+      "description": "no carti no uzi no nothing?"
+    },
+    {
+      "id": 57,
+      "type": "video",
+      "src": "lottery_media/not_some_bullshit.mp4",
+      "rarity": "common",
+      "description": "hopefully its not some bullshit"
+    },
+    {
+      "id": 58,
+      "type": "video",
+      "src": "lottery_media/opinion_on_mexicans.mp4",
+      "rarity": "common",
+      "description": "opinion on mexicans"
+    },
+    {
+      "id": 59,
+      "type": "video",
+      "src": "lottery_media/orangensaft.mp4",
+      "rarity": "common",
+      "description": "money boy in ritz carlton"
+    },
+    {
+      "id": 60,
+      "type": "video",
+      "src": "lottery_media/penguins_walmart.mp4",
+      "rarity": "common",
+      "description": "spanish walmart ad with penguins of madagascar "
+    },
+    {
+      "id": 61,
+      "type": "video",
+      "src": "lottery_media/portfolio.mp4",
+      "rarity": "common",
+      "description": "military industrial complex edit"
+    },
+    {
+      "id": 62,
+      "type": "video",
+      "src": "lottery_media/rapist_fancam.mp4",
+      "rarity": "common",
+      "description": "conor mcgregor walking fancam (unfortunately a rapist)"
+    },
+    {
+      "id": 63,
+      "type": "video",
+      "src": "lottery_media/russian_tilted_towers.mp4",
+      "rarity": "common",
+      "description": "easterner is teleported to tilted towers"
+    },
+    {
+      "id": 64,
+      "type": "video",
+      "src": "lottery_media/russian_wave.mp4",
+      "rarity": "common",
+      "description": "russian man floating on a wave"
+    },
+    {
+      "id": 65,
+      "type": "video",
+      "src": "lottery_media/smoke_a_cart.mp4",
+      "rarity": "common",
+      "description": "lets go smoke a fucking cart"
+    },
+    {
+      "id": 66,
+      "type": "video",
+      "src": "lottery_media/socrates_and_plato.mp4",
+      "rarity": "common",
+      "description": "socrates and plato"
+    },
+    {
+      "id": 67,
+      "type": "video",
+      "src": "lottery_media/spongebob_box.mp4",
+      "rarity": "common",
+      "description": "spongebob in box"
+    },
+    {
+      "id": 68,
+      "type": "video",
+      "src": "lottery_media/supreme_dudes.mp4",
+      "rarity": "common",
+      "description": "guess why"
+    },
+    {
+      "id": 69,
+      "type": "video",
+      "src": "lottery_media/the_architect_and_the_builder.mp4",
+      "rarity": "common",
+      "description": "the architect and the builder arrive calmly with a sense of purpose"
+    },
+    {
+      "id": 70,
+      "type": "video",
+      "src": "lottery_media/the_thinker.mp4",
+      "rarity": "common",
+      "description": "you are not the thinker"
+    },
+    {
+      "id": 71,
+      "type": "video",
+      "src": "lottery_media/them_boy_paegans.mp4",
+      "rarity": "common",
+      "description": "alexa"
+    },
+    {
+      "id": 72,
+      "type": "video",
+      "src": "lottery_media/this_is_a_cellphone.mp4",
+      "rarity": "common",
+      "description": "with my so-called girlfriend"
+    },
+    {
+      "id": 73,
+      "type": "video",
+      "src": "lottery_media/whos_4.mp4",
+      "rarity": "common",
+      "description": "im looking for someone whos 4"
+    },
+    {
+      "id": 74,
+      "type": "video",
+      "src": "lottery_media/wind_turbines.mp4",
+      "rarity": "common",
+      "description": "wind turbines against global warming"
+    },
+    {
+      "id": 75,
+      "type": "video",
+      "src": "lottery_media/ynw_melly.mp4",
+      "rarity": "common",
+      "description": "ynw melly happy about honey bun"
+    },
+    {
+      "id": 76,
+      "type": "video",
+      "src": "lottery_media/yodieland.mp4",
+      "rarity": "common",
+      "description": "i wanna go to yodieland"
+    },
+    {
+      "id": 77,
+      "type": "video",
+      "src": "lottery_media/young_ronaldo_edit.mp4",
+      "rarity": "common",
+      "description": "edit of early career ronaldo"
+    },
+    {
+      "id": 78,
+      "type": "video",
+      "src": "lottery_media/young_sheldon_bigbangtheory.mp4",
+      "rarity": "common",
+      "description": "jamaican young sheldong big bang theory"
+    },
+    {
+      "id": 79,
+      "type": "video",
+      "src": "lottery_media/zyzz.mp4",
+      "rarity": "common",
+      "description": "zyzz with twins music"
     }
   ]
 }

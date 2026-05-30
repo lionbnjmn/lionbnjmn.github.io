@@ -25,8 +25,8 @@
 
   async function loadLotteryData() {
     if (lotteryData) return lotteryData;
-    const res = await fetch("lottery.json", { cache: "no-cache" });
-    if (!res.ok) throw new Error(`Failed to load lottery.json: ${res.status}`);
+    const res = await fetch("lottery_index.json", { cache: "no-cache" });
+    if (!res.ok) throw new Error(`Failed to load lottery_index.json: ${res.status}`);
     lotteryData = await res.json();
     return lotteryData;
   }
