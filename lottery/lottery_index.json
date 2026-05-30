@@ -200,7 +200,7 @@
       "type": "video",
       "src": "lottery_media/folgende_gleichung.mp4",
       "rarity": "common",
-      "description": "lösen sie bitte folgende gleichung"
+      "description": "l\u00f6sen sie bitte folgende gleichung"
     },
     {
       "id": 29,
@@ -501,7 +501,7 @@
       "type": "video",
       "src": "lottery_media/them_boy_paegans.mp4",
       "rarity": "common",
-      "description": "alexa"
+      "description": "hey google"
     },
     {
       "id": 72,
@@ -515,7 +515,7 @@
       "type": "video",
       "src": "lottery_media/whos_4.mp4",
       "rarity": "common",
-      "description": "im looking for someone whos 4"
+      "description": "somebody whos 4"
     },
     {
       "id": 74,
@@ -558,6 +558,139 @@
       "src": "lottery_media/zyzz.mp4",
       "rarity": "common",
       "description": "zyzz with twins music"
+    },
+    {
+      "id": 80,
+      "type": "image",
+      "src": "lottery_media/alarm_clock.jpg",
+      "rarity": "common",
+      "description": "alarm clock"
+    },
+    {
+      "id": 81,
+      "type": "image",
+      "src": "lottery_media/atlanta_white_guy.jpg",
+      "rarity": "common",
+      "description": "white guy from atlanta"
+    },
+    {
+      "id": 82,
+      "type": "image",
+      "src": "lottery_media/big_numbers.jpg",
+      "rarity": "common",
+      "description": "big numbers"
+    },
+    {
+      "id": 83,
+      "type": "image",
+      "src": "lottery_media/daquan.jpg",
+      "rarity": "common",
+      "description": "historic daquan post"
+    },
+    {
+      "id": 84,
+      "type": "image",
+      "src": "lottery_media/e_mc2_ai.jpg",
+      "rarity": "common",
+      "description": "state of linkedin"
+    },
+    {
+      "id": 85,
+      "type": "image",
+      "src": "lottery_media/ey_wottsch.jpg",
+      "rarity": "common",
+      "description": "ey wöttsch"
+    },
+    {
+      "id": 86,
+      "type": "image",
+      "src": "lottery_media/fight_club.jpg",
+      "rarity": "common",
+      "description": "fight club"
+    },
+    {
+      "id": 87,
+      "type": "image",
+      "src": "lottery_media/for_me_5.jpg",
+      "rarity": "common",
+      "description": "destroy lonely"
+    },
+    {
+      "id": 88,
+      "type": "image",
+      "src": "lottery_media/gurke_richi.jpg",
+      "rarity": "common",
+      "description": "ja"
+    },
+    {
+      "id": 89,
+      "type": "image",
+      "src": "lottery_media/hikaru_with_kids.jpg",
+      "rarity": "common",
+      "description": "hikaru nakamura meets fans"
+    },
+    {
+      "id": 90,
+      "type": "image",
+      "src": "lottery_media/hopp_de_bese.jpg",
+      "rarity": "common",
+      "description": "cheating"
+    },
+    {
+      "id": 91,
+      "type": "image",
+      "src": "lottery_media/huet_guete_tag.jpg",
+      "rarity": "common",
+      "description": "hüt guete tag"
+    },
+    {
+      "id": 92,
+      "type": "image",
+      "src": "lottery_media/i_bi_de_links.jpg",
+      "rarity": "common",
+      "description": "leftist infighting"
+    },
+    {
+      "id": 93,
+      "type": "image",
+      "src": "lottery_media/im_okay.jpg",
+      "rarity": "common",
+      "description": "never judge a book by its cover"
+    },
+    {
+      "id": 94,
+      "type": "image",
+      "src": "lottery_media/jarwisse.jpg",
+      "rarity": "common",
+      "description": "french iron man"
+    },
+    {
+      "id": 95,
+      "type": "image",
+      "src": "lottery_media/jeff_dr_chef.jpg",
+      "rarity": "common",
+      "description": "jeff bezos"
+    },
+    {
+      "id": 96,
+      "type": "image",
+      "src": "lottery_media/kanye.jpg",
+      "rarity": "common",
+      "description": "values and morals"
+    },
+    {
+      "id": 97,
+      "type": "image",
+      "src": "lottery_media/speed_dating.jpg",
+      "rarity": "common",
+      "description": "selective dating procedure"
+    },
+    {
+      "id": 98,
+      "type": "image",
+      "src": "lottery_media/we_dem_boys.jpg",
+      "rarity": "common",
+      "description": "we dem boys"
     }
   ]
 }
