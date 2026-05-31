@@ -96,6 +96,107 @@
     });
   }
 
+  // Drops a fixed-position media overlay (gif/webp/png/mp4) at a chosen
+  // viewport spot, plays for durationMs, then removes itself.
+  // origin: { x, y } as 0..1 fractions of the viewport (default centered).
+  async function playMediaOverlay({
+    src,
+    durationMs = 1500,
+    scale = 0.6,
+    mediaType = "image",
+    zIndex = 200,
+    origin = { x: 0.5, y: 0.5 },
+  }) {
+    const wrap = document.createElement("div");
+    Object.assign(wrap.style, {
+      position: "fixed",
+      left: `${origin.x * 100}vw`,
+      top: `${origin.y * 100}vh`,
+      transform: "translate(-50%, -50%)",
+      pointerEvents: "none",
+      zIndex: String(zIndex),
+    });
+
+    let media;
+    if (mediaType === "video") {
+      media = document.createElement("video");
+      media.src = src;
+      media.autoplay = true;
+      media.muted = true;
+      media.playsInline = true;
+      media.loop = false;
+    } else {
+      media = document.createElement("img");
+      // GIFs auto-loop; bust cache so the animation restarts on each play.
+      media.src = `${src}?t=${Date.now()}_${Math.random()}`;
+      media.alt = "";
+    }
+    Object.assign(media.style, {
+      maxWidth: `${scale * 100}vw`,
+      maxHeight: `${scale * 100}vh`,
+      width: "auto",
+      height: "auto",
+      display: "block",
+    });
+
+    wrap.appendChild(media);
+    document.body.appendChild(wrap);
+    try {
+      await sleep(durationMs);
+    } finally {
+      wrap.remove();
+    }
+  }
+
+  // Fires the same media overlay N times at staggered positions and times.
+  // - count: how many copies
+  // - durationMs: lifespan of each copy
+  // - scale: per-copy size as 0..1 fraction of viewport
+  // - spread: half-width of the random region around the center, in vw/vh (0..1)
+  // - center: center of the spread region as 0..1 fractions of viewport
+  // - staggerMs: max random delay before each copy spawns
+  // - resolves when the last copy has finished
+  async function playMediaBurst({
+    src,
+    count = 5,
+    durationMs = 1500,
+    scale = 0.4,
+    spread = 0.25,
+    center = { x: 0.5, y: 0.5 },
+    staggerMs = 400,
+    mediaType = "image",
+    zIndex = 200,
+  }) {
+    const promises = [];
+    for (let i = 0; i < count; i++) {
+      const delay = Math.random() * staggerMs;
+      const origin = {
+        x: Math.min(
+          0.95,
+          Math.max(0.05, center.x + (Math.random() * 2 - 1) * spread),
+        ),
+        y: Math.min(
+          0.95,
+          Math.max(0.05, center.y + (Math.random() * 2 - 1) * spread),
+        ),
+      };
+      const jitterScale = scale * (0.75 + Math.random() * 0.5); // ±25% size jitter
+      promises.push(
+        sleep(delay).then(() =>
+          playMediaOverlay({
+            src,
+            durationMs,
+            scale: jitterScale,
+            mediaType,
+            zIndex,
+            origin,
+          }),
+        ),
+      );
+    }
+    await Promise.all(promises);
+  }
+
   async function spinAnimation({ pool, frames = 20, totalMs = 1800 }) {
     if (!pool || pool.length === 0) return;
 
@@ -221,13 +322,13 @@
   // when the visual is finished. Effects are provider-agnostic: confetti,
   // lottie, css, etc. all live here under the same shape.
   const RARITY_COLORS = {
-    common:    ["#b1b1b1"],
-    uncommon:  ["#319236", "#5cd962"],
-    rare:      ["#4c51f7", "#8b8eff"],
-    epic:      ["#9d4dbb", "#d6a3ff"],
+    common: ["#b1b1b1"],
+    uncommon: ["#319236", "#5cd962"],
+    rare: ["#4c51f7", "#8b8eff"],
+    epic: ["#9d4dbb", "#d6a3ff"],
     legendary: ["#f3af19", "#ffd76b", "#fff5cc"],
-    mythic:    ["#e5bc55", "#fff2c2"],
-    exotic:    ["#00fffb", "#a0fffd"],
+    mythic: ["#e5bc55", "#fff2c2"],
+    exotic: ["#00fffb", "#a0fffd"],
   };
 
   const EFFECTS = {
@@ -282,28 +383,43 @@
       await sleep(1700);
     },
 
-    // Placeholder — same shape as confetti effects, just a different provider.
-    // To use: load lottie-web (e.g. <script src="vendor/lottie.min.js"></script>),
-    // commit a Lottie JSON to /lottery/animations/<name>.json, swap this stub for:
-    //   const anim = lottie.loadAnimation({ container, renderer: "svg",
-    //     loop: false, autoplay: true, path: "animations/explosion.json" });
-    //   await new Promise((r) => anim.addEventListener("complete", r));
-    //   anim.destroy();
-    lottieExplosion: async ({ colors }) => {
-      // fall back to fireworks until a Lottie file is wired in
-      return EFFECTS.confettiFireworks({ colors });
-    },
+    // GIF / image overlay effects. Drop a file into fun/animations/, then add
+    // an entry here pointing at it. Works for .gif, .webp, .png. For .mp4,
+    // pass mediaType: "video" — playMediaOverlay handles both.
+    gifExplosion: async () =>
+      playMediaOverlay({
+        src: "animations/explosion.gif",
+        durationMs: 1500,
+        scale: 1,
+      }),
+
+    gifExplosionBarrage: async () =>
+      playMediaBurst({
+        src: "animations/explosion.gif",
+        count: 8,
+        durationMs: 1500,
+        scale: 1,
+        spread: 0.2,
+        staggerMs: 600,
+      }),
+
+    gifFireworks: async () =>
+      playMediaOverlay({
+        src: "animations/fireworks.gif",
+        durationMs: 2000,
+        scale: 0.7,
+      }),
   };
 
   // Rarity → effect-name. Swap any value to re-bind. Add new rarities freely.
   const RARITY_EFFECT = {
-    common:    "noop",
-    uncommon:  "noop",
-    rare:      "confettiSmall",
-    epic:      "confettiBig",
+    common: "noop",
+    uncommon: "noop",
+    rare: "confettiSmall",
+    epic: "confettiBig",
     legendary: "confettiFireworks",
-    mythic:    "confettiFireworks",
-    exotic:    "confettiFireworks",
+    mythic: "gifExplosionBarrage",
+    exotic: "confettiBig",
   };
 
   async function playRarityEffect(rarity) {
