@@ -695,6 +695,20 @@
       "src": "lottery_media/we_dem_boys.jpg",
       "rarity": "common",
       "description": "we dem boys"
+    },
+    {
+      "id": 99,
+      "type": "video",
+      "src": "lottery_media/nettspend.mp4",
+      "rarity": "rare",
+      "description": "nettspend"
+    },
+    {
+      "id": 100,
+      "type": "image",
+      "src": "lottery_media/favela.jpeg",
+      "rarity": "uncommon",
+      "description": "favela haircut"
     }
   ]
 }
