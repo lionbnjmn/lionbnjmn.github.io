@@ -8,8 +8,8 @@ Idempotent: skips thumbs that already exist (use --force to regenerate).
 Requires ffmpeg on PATH.
 
 Usage:
-  python3 tools/make_thumbs.py            # generate missing thumbs
-  python3 tools/make_thumbs.py --force    # regenerate all
+  python3 lottery/deploy/make_thumbs.py            # generate missing thumbs
+  python3 lottery/deploy/make_thumbs.py --force    # regenerate all
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 LOTTERY_DIR = REPO_ROOT / "lottery"
 INDEX_PATH = LOTTERY_DIR / "lottery_index.json"
 THUMBS_DIR = LOTTERY_DIR / "lottery_thumbs"
@@ -55,10 +55,12 @@ FFMPEG: str = ""  # set in main()
 
 
 def run(cmd: list[str]) -> None:
+    """Run a command. Raises RuntimeError on nonzero exit."""
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0:
-        sys.stderr.write(f"command failed: {' '.join(cmd)}\n{result.stderr}\n")
-        raise SystemExit(1)
+        raise RuntimeError(
+            f"command failed: {' '.join(cmd)}\n{result.stderr}"
+        )
 
 
 def make_video_thumb(src: Path, dst: Path) -> None:
@@ -116,6 +118,7 @@ def main() -> int:
     generated = 0
     skipped = 0
     missing = 0
+    failed = 0
 
     for item in data.get("items", []):
         item_id = item.get("id")
@@ -146,11 +149,11 @@ def main() -> int:
                 make_image_thumb(src_path, dst_path)
             generated += 1
             print(f"  ok  id={item_id}  {item_src} -> {dst_path.name}")
-        except SystemExit:
-            sys.stderr.write(f"  FAIL id={item_id}  {item_src}\n")
-            return 1
+        except RuntimeError as e:
+            failed += 1
+            sys.stderr.write(f"  FAIL id={item_id}  {item_src}\n{e}\n")
 
-    print(f"\ngenerated: {generated}, skipped: {skipped}, missing source: {missing}")
+    print(f"\ngenerated: {generated}, skipped: {skipped}, missing source: {missing}, failed: {failed}")
     return 0
 
 

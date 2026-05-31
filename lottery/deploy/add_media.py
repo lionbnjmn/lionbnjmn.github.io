@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 import json
 import time
 import shutil
@@ -17,10 +18,13 @@ REPO_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
 REPO_MEDIA_DIR = os.path.join(REPO_ROOT, "lottery", "lottery_media")
 INDEX_FILE = os.path.join(REPO_ROOT, "lottery", "lottery_index.json")
 DOWNLOADED_LINKS = os.path.join(SCRIPT_DIR, "downloaded_links.txt")
+FAILED_LINKS = os.path.join(SCRIPT_DIR, "failed_links.txt")
 YT_DLP = os.path.join(SCRIPT_DIR, "venv", "bin", "yt-dlp")
 
 DROP_LINKS_FILE = os.path.join(ICLOUD_DROPZONE, "links.txt")
 DROP_MEDIA_DIR = os.path.join(ICLOUD_DROPZONE, "media")
+
+MAKE_THUMBS_SCRIPT = os.path.join(SCRIPT_DIR, "make_thumbs.py")
 
 VIDEO_EXTS = {".mp4", ".mov", ".webm"}
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp"}
@@ -88,9 +92,15 @@ def download_links_flow(counter, data):
     else:
         downloaded = set()
 
-    new_links = [l for l in links if l not in downloaded]
+    if os.path.exists(FAILED_LINKS):
+        with open(FAILED_LINKS, "r") as f:
+            failed_before = set(line.strip() for line in f if line.strip())
+    else:
+        failed_before = set()
+
+    new_links = [l for l in links if l not in downloaded and l not in failed_before]
     print(f"=== LINKS ===")
-    print(f"Total: {len(links)}. Previously downloaded: {len(downloaded)}. New: {len(new_links)}")
+    print(f"Total: {len(links)}. Downloaded: {len(downloaded)}. Previously failed: {len(failed_before)}. New: {len(new_links)}")
 
     if not new_links:
         return counter
@@ -122,6 +132,8 @@ def download_links_flow(counter, data):
             if saved is None:
                 failed_count += 1
                 print(f"❌ yt-dlp returned 0 but no file at {counter:03d}.*")
+                with open(FAILED_LINKS, "a") as f:
+                    f.write(link + "\n")
             else:
                 success_count += 1
                 print(f"✅ Saved as {saved}")
@@ -132,6 +144,8 @@ def download_links_flow(counter, data):
         else:
             failed_count += 1
             print(f"❌ Failed to download {link}")
+            with open(FAILED_LINKS, "a") as f:
+                f.write(link + "\n")
 
         if i < len(new_links):
             print("⏳ Waiting 5 seconds before the next download...")
@@ -179,6 +193,12 @@ def main():
     counter = drop_media_flow(counter, data)
 
     save_index(data)
+
+    print("\n=== THUMBS ===")
+    result = subprocess.run([sys.executable, MAKE_THUMBS_SCRIPT])
+    if result.returncode != 0:
+        print("⚠️  thumb generation reported errors (see above); continuing anyway")
+
     print("\n🎉 Done. Review `git status` and `git diff lottery/lottery_index.json`, then commit & push.")
 
 

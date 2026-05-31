@@ -216,6 +216,108 @@
     return item.src;
   }
 
+  // === effect system ============================================
+  // Each effect is an async function that takes { colors } and resolves
+  // when the visual is finished. Effects are provider-agnostic: confetti,
+  // lottie, css, etc. all live here under the same shape.
+  const RARITY_COLORS = {
+    common:    ["#b1b1b1"],
+    uncommon:  ["#319236", "#5cd962"],
+    rare:      ["#4c51f7", "#8b8eff"],
+    epic:      ["#9d4dbb", "#d6a3ff"],
+    legendary: ["#f3af19", "#ffd76b", "#fff5cc"],
+    mythic:    ["#e5bc55", "#fff2c2"],
+    exotic:    ["#00fffb", "#a0fffd"],
+  };
+
+  const EFFECTS = {
+    noop: async () => {},
+
+    confettiSmall: async ({ colors }) => {
+      if (typeof confetti !== "function") return;
+      confetti({
+        particleCount: 60,
+        spread: 60,
+        startVelocity: 35,
+        origin: { y: 0.6 },
+        colors,
+      });
+      await sleep(700);
+    },
+
+    confettiBig: async ({ colors }) => {
+      if (typeof confetti !== "function") return;
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        startVelocity: 45,
+        scalar: 1.1,
+        origin: { y: 0.6 },
+        colors,
+      });
+      await sleep(1000);
+    },
+
+    confettiFireworks: async ({ colors }) => {
+      if (typeof confetti !== "function") return;
+      const bursts = [
+        { x: 0.2, delay: 0 },
+        { x: 0.8, delay: 250 },
+        { x: 0.5, delay: 500 },
+        { x: 0.35, delay: 800 },
+        { x: 0.65, delay: 1000 },
+      ];
+      bursts.forEach((b) => {
+        setTimeout(() => {
+          confetti({
+            particleCount: 100,
+            spread: 80,
+            startVelocity: 50,
+            scalar: 1.2,
+            origin: { x: b.x, y: 0.45 },
+            colors,
+          });
+        }, b.delay);
+      });
+      await sleep(1700);
+    },
+
+    // Placeholder — same shape as confetti effects, just a different provider.
+    // To use: load lottie-web (e.g. <script src="vendor/lottie.min.js"></script>),
+    // commit a Lottie JSON to /lottery/animations/<name>.json, swap this stub for:
+    //   const anim = lottie.loadAnimation({ container, renderer: "svg",
+    //     loop: false, autoplay: true, path: "animations/explosion.json" });
+    //   await new Promise((r) => anim.addEventListener("complete", r));
+    //   anim.destroy();
+    lottieExplosion: async ({ colors }) => {
+      // fall back to fireworks until a Lottie file is wired in
+      return EFFECTS.confettiFireworks({ colors });
+    },
+  };
+
+  // Rarity → effect-name. Swap any value to re-bind. Add new rarities freely.
+  const RARITY_EFFECT = {
+    common:    "noop",
+    uncommon:  "noop",
+    rare:      "confettiSmall",
+    epic:      "confettiBig",
+    legendary: "confettiFireworks",
+    mythic:    "confettiFireworks",
+    exotic:    "confettiFireworks",
+  };
+
+  async function playRarityEffect(rarity) {
+    const effectName = RARITY_EFFECT[rarity] || "noop";
+    const effect = EFFECTS[effectName] || EFFECTS.noop;
+    const colors = RARITY_COLORS[rarity] || ["#ffffff"];
+    try {
+      await effect({ colors });
+    } catch (err) {
+      console.error(`effect "${effectName}" failed:`, err);
+    }
+  }
+  // ==============================================================
+
   async function roll() {
     if (rollBtn.disabled) return;
     rollBtn.disabled = true;
@@ -234,6 +336,7 @@
 
       await spinAnimation({ pool: spinPool });
       renderResult(pick);
+      await playRarityEffect(pick.rarity);
     } catch (err) {
       clearResult();
       const msg = document.createElement("p");
